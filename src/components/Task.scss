@@ -1,0 +1,71 @@
+.Task {
+  display: grid;
+  padding: 15px;
+  grid-template-columns: auto auto;
+  align-content: center;
+  border-radius: 10px;
+  grid-template-areas:
+    'ID Actions'
+    'Title Actions'
+    'Desc Actions';
+  background: white;
+
+  @media only screen and (max-width: 600px) {
+    gap: 5px;
+  }
+
+  @media only screen and (min-width: 601px) {
+    gap: 10px;
+  }
+
+  button {
+    outline: none;
+    border: black solid 1px;
+    padding: 5px 10px;
+    background: white;
+  }
+
+  .Title {
+    font-weight: bold;
+    align-self: center;
+    grid-area: Title;
+  }
+
+  .Desc {
+    align-self: center;
+    grid-area: Desc;
+  }
+
+  .Actions {
+    display: grid;
+    grid-area: Actions;
+    align-self: center;
+    justify-self: right;
+    grid-template-columns: repeat(3, 1fr);
+    width: min-content;
+    gap: 10px;
+
+    button {
+      width: min-content;
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+
+    input[type='checkbox'] {
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      justify-self: center;
+    }
+  }
+}
+
+.Complete {
+  border: 3px green solid;
+}
+
+.Incomplete {
+  border: 3px red solid;
+}

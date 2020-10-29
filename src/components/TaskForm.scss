@@ -1,0 +1,18 @@
+form {
+  display: grid;
+  gap: 10px;
+  margin: 10px 0;
+
+  input,
+  textarea {
+    padding: 10px;
+    border: solid 1px black;
+    border-radius: 10px;
+    outline: none;
+    background: white;
+  }
+
+  input[type='submit'] {
+    cursor: pointer;
+  }
+}

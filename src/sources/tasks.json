@@ -1,0 +1,50 @@
+[
+    {
+        "id": 0,
+        "title": "Task ",
+        "desc": "Study React and practice to be better",
+        "done": true
+    },
+    {
+        "id": 1,
+        "title": "Task ",
+        "desc": "Call my girlfriend",
+        "done": false
+    },
+    {
+        "id": 2,
+        "title": "Task ",
+        "desc": "Check the messages",
+        "done": true
+    },
+    {
+        "id": 3,
+        "title": "Task ",
+        "desc": "Create another App in React",
+        "done": true
+    },
+    {
+        "id": 4,
+        "title": "Task ",
+        "desc": "Look for a job",
+        "done": false
+    },
+    {
+        "id": 5,
+        "title": "Task ",
+        "desc": "Go to the city",
+        "done": false
+    },
+    {
+        "id": 6,
+        "title": "Task ",
+        "desc": "Get a better GPU",
+        "done": true
+    },
+    {
+        "id": 7,
+        "title": "Task ",
+        "desc": "Buy stuff",
+        "done": true
+    }
+]
