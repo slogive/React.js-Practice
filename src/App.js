@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.scss';
 import tasks from './sources/tasks.json';
 
 import Tasks from './components/Tasks';
 import TaskForm from './components/TaskForm';
+import Posts from './components/Posts';
 
 class App extends Component {
   state = {
@@ -57,19 +59,33 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <nav>
-          <span>Task List in React</span>
-        </nav>
-        <TaskForm addTask={this.addTask} tasks={this.state.tasks.length} />
-        <Tasks
-          tasks={this.state.tasks}
-          deleteTask={this.deleteTask}
-          checkDone={this.checkDone}
-          checkUndone={this.checkUndone}
-          editTask={this.editTask}
-        />
-      </div>
+      <Router>
+        <Link to="/">Home</Link>
+        <br></br>
+        <Link to="/posts">Posts</Link>
+        <Route
+          exact
+          path="/"
+          render={() => {
+            return (
+              <div>
+                <TaskForm
+                  addTask={this.addTask}
+                  tasks={this.state.tasks.length}
+                />
+                <Tasks
+                  tasks={this.state.tasks}
+                  deleteTask={this.deleteTask}
+                  checkDone={this.checkDone}
+                  checkUndone={this.checkUndone}
+                  editTask={this.editTask}
+                />
+              </div>
+            );
+          }}
+        ></Route>
+        <Route path="/posts" component={Posts}></Route>
+      </Router>
     );
   }
 }

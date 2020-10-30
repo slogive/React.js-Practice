@@ -27,22 +27,25 @@ export default class TaskForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.onSubmit}>
-        <input
-          type="text"
-          name="title"
-          placeholder="Write a task"
-          onChange={this.onChange}
-          value={this.state.title}
-        ></input>
-        <textarea
-          name="desc"
-          placeholder="Write a description"
-          onChange={this.onChange}
-          value={this.state.desc}
-        ></textarea>
-        <input type="submit"></input>
-      </form>
+      <div>
+        <span>Task List in React</span>
+        <form onSubmit={this.onSubmit}>
+          <input
+            type="text"
+            name="title"
+            placeholder="Write a task"
+            onChange={this.onChange}
+            value={this.state.title}
+          ></input>
+          <textarea
+            name="desc"
+            placeholder="Write a description"
+            onChange={this.onChange}
+            value={this.state.desc}
+          ></textarea>
+          <input type="submit"></input>
+        </form>
+      </div>
     );
   }
 }
